@@ -22,6 +22,9 @@ e.g. in `config/initializers/geocoder.rb` in Rails projects
 ```ruby
 Geocoder.configure(
   lookup: :studitemps,
+  studitemps: {
+    host: "THIS-IS-THE-ENDPOINT"
+  }
   …
 )
 ```

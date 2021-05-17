@@ -5,7 +5,7 @@ module Geocoder::Result
     ##
     # Geolocation
     def coordinates
-      [@data['lat'].to_f, @data['lon'].to_f]
+      [@data['latitude'].to_f, @data['longitude'].to_f]
     end
   end
 end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    geocoder-studitemps (0.1.0)
+    geocoder-studitemps (0.1.1)
       geocoder (~> 1.6)
 
 GEM

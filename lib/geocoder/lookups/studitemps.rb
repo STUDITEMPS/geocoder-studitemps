@@ -30,7 +30,7 @@ module Geocoder::Lookup
 
     def base_query_url(query)
       text = CGI.escape(query.sanitized_text.strip)
-      "#{protocol}://geocoder-studitemps.herokuapp.com/geocoder?address=#{text}"
+      "#{protocol}://#{configuration[:host]}/geocode?address=#{text}"
     end
   end
 end
