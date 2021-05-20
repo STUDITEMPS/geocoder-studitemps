@@ -30,4 +30,15 @@ RSpec.describe Geocoder::Lookup::Studitemps do
       expect(coords).to eq [50.948358, 6.9452432]
     end
   end
+
+  context "Invalid address" do
+    it "returns nil when given an address that does not exist" do
+      stub_request(:get, "https://#{hostname}/geocode")
+        .with(query: hash_including('address'))
+        .to_return(body: nil, status: 200, headers: {})
+
+      coords = Geocoder.coordinates('Wineroad 222, 51103 The Kingsland')
+      expect(coords).to be_nil
+    end
+  end
 end
