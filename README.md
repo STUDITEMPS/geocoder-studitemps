@@ -23,7 +23,14 @@ e.g. in `config/initializers/geocoder.rb` in Rails projects
 Geocoder.configure(
   lookup: :studitemps,
   studitemps: {
-    host: "THIS-IS-THE-ENDPOINT"
+    host: "THIS-IS-THE-ENDPOINT",
+    cache_store: ActiveSupport::Cache::MemoryStore.new, # uses the ActiveSupport::Cache::Store API
+    auth0: {
+      client_id: "CLIENT_ID",
+      client_secret: "CLIENT_SECRET",
+      site: "SITE",
+      audience: "AUDIENCE"
+    }
   }
   …
 )
