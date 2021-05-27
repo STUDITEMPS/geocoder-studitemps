@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+require "bundler/setup"
+require "geocoder"
+require "geocoder/lookups/studitemps"
+require "pry"
+
+Cache = Struct.new(:value) do
+  def read(key)
+    value
+  end
+  def write(key, value, options={})
+    value
+  end
+end
+
+Geocoder.configure(
+  lookup: :studitemps,
+  studitemps: {
+
+    host: ENV["HOST"],
+
+    # cache_store: Redis::Store.new(url: "redis://localhost:6379/1", namespace: "auth0"),
+    auth0: {
+      client_id: ENV["CLIENT_ID"],
+      client_secret: ENV["CLIENT_SECRET"],
+      site: ENV["SITE"],
+      audience: ENV["AUDIENCE"],
+    }
+  },
+  always_raise: [Geocoder::RequestDenied]
+)
+puts Geocoder.search("Im Mediapark 4a, 50670 Köln").inspect
