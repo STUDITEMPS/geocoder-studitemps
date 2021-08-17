@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = "Studitemps adapter for the Geocoder gem"
   spec.description   = "Studitemps adapter for the Geocoder gem"
   spec.homepage      = "https://github.com/studitemps/geocoder-studitemps"
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.7.2")
 
   spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
