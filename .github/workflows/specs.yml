@@ -4,10 +4,17 @@ on: push
 jobs:
   tests:
     name: Tests
-    runs-on: ubuntu-latest
 
     env:
       RACK_ENV: test
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        # Due to https://github.com/actions/runner/issues/849, we have to use quotes for '3.0'
+        ruby: [2.7, '3.0']
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout code
@@ -16,7 +23,7 @@ jobs:
       - name: Setup Ruby and install gems
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
 
       - name: Run tests
