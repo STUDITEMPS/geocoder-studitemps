@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    geocoder-studitemps (0.1.1)
+    geocoder-studitemps (0.3.1)
       geocoder (~> 1.6)
       oauth2 (~> 1.4)
 
@@ -76,6 +76,7 @@ GEM
       hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
+  arm64-darwin-21
   x86_64-darwin-19
   x86_64-darwin-20
   x86_64-linux
