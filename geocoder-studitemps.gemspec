@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
 
   # Register a new dependency of your gem
   spec.add_dependency "geocoder", "~> 1.6"
-  spec.add_dependency "oauth2", "~> 1.4"
+  spec.add_dependency "oauth2", ">= 1.4", "< 3.0"
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
