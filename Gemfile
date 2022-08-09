@@ -9,7 +9,7 @@ gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.11"
 
-gem "rubocop", "~> 1.32"
+gem "rubocop", "~> 1.34"
 
 gem "webmock"
 
