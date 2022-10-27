@@ -19,7 +19,7 @@ GEM
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (2.0.1)
-    geocoder (1.6.7)
+    geocoder (1.8.1)
     hashdiff (1.0.1)
     json (2.6.2)
     jwt (2.3.0)
